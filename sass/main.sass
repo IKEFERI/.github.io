@@ -1,0 +1,469 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $bold-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.home-pg
+	padding-bottom: 10vh
+	background-color: $wgrey
+	.top-line
+		background-color: $blue
+		padding: 10px 0
+		width: 100%
+		a
+			color: #fff
+			font-size: 16px
+			white-space: nowrap
+			margin-right: 20px
+			font-family: $bold-font
+			&:hover, &:active
+				color: $green
+				text-decoration: none
+		i
+			margin-right: 12px
+			padding: 0
+			font-size: 18px
+			color: $green
+		.phone, .map-link
+			white-space: nowrap
+		.map-link
+			text-decoration: underline
+		.button
+			position: relative
+			padding-bottom: 10px
+			padding-top: 50px
+			top: -10px
+		.parent
+			margin: 5px
+			&:hover
+				transform: translateY(5px)
+			&:active
+				transform: translateY(10px)
+
+.button
+	background: radial-gradient(circle at 0 90%, rgba(204,0,0,0) $radius1, $cbutton $radius2), radial-gradient(circle at 100% 90%, rgba(204,0,0,0) $radius1, $cbutton $radius2), radial-gradient(circle at 100% 10%, rgba(204,0,0,0) $radius1, $cbutton $radius2), radial-gradient(circle at 0 10%, rgba(204,0,0,0) $radius1, $cbutton $radius2)
+	background-position: bottom left, bottom right, top right, top left
+	background-size: 52% 52%
+	background-repeat: no-repeat
+	width: 100%
+	padding: 17px
+	text-transform: uppercase
+	white-space: nowrap
+	font-family: $bold-font
+	color: #fff
+	+mt(0.25s)
+	&:hover
+		color: #fff!important
+		text-decoration: none
+		transform: translateY(5px)
+.parent
+	display: block
+	margin: 20px 0
+	+mt(0.25s)
+	&:hover
+	&:active
+		transform: translateY(5px)
+
+.top-menu
+	padding: 25px
+	background-color: $wgrey
+	color: #000
+	.main-menu
+		ul, li
+			list-style-type: none
+			padding: 0
+			margin: 0
+		li
+			display: inline-block
+			padding: 10px
+			text-transform: uppercase
+			border: rgba($blue,0) 2px solid
+			+mt(0.25s)
+			&:hover
+				border: $blue 2px solid
+				a
+					color: $blue
+					text-decoration: none
+			a
+				color: #000
+	.button
+		margin: 0
+
+.top-text
+	background-size: cover
+	background-repeat: no-repeat
+	.row
+		height: 270px
+	.title
+		font-size: 36px
+		line-height: 1.25em
+		margin-bottom: 40px
+		color: #fff
+.fotorama
+	width: 50vw
+	margin-top: 20px
+	background-color: $dblue
+.fotorama__arr-
+	&-prev,&-next
+		font-size: 36px
+		font-family: fontawesome
+		color: #fff
+		margin: 0 30px
+	&-prev
+		&::before
+			content: '\f30a'	
+	&-next
+		&::before
+			content: '\f30b'
+.gallery-item
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		left: 0
+		bottom: 0 
+		right: 0
+		height: 101%
+		width: 100%
+		background: rgba($dblue, .2)
+
+.gallery-item
+	color: #fff
+	text-align: center
+	.gallery-item-wrap
+		position: relative
+	.h2
+		font-size: 36px
+		text-transform: uppercase
+		line-height: 1.25em
+		margin-bottom: 25px
+		font-family: $bold-font
+.easy-button
+	display: inline-flex
+	white-space: nowrap
+	font-family: $bold-font
+	color: #fff
+	padding: 15px 55px
+	background-color: rgba($green, 0.8)
+	border: #fff 1px solid
+	text-transform: uppercase
+	+mt(.25s)
+	&:hover
+		color: #fff
+		background-color: rgba($green, 0.95)
+		text-decoration: none
+	&:active
+		transform: translateY(3px)
+
+.fotorama__html
+	display: flex
+	align-items: center
+	justify-content: center
+
+.bottom-text
+	background-color: $wgrey
+	color: $dblue
+	padding-top: 4vh
+	.h1
+		font-family: $bold-font
+		font-size: 30px
+		color: #303a53
+		line-height: 1.15em
+
+form
+	font-family: $bold-font
+	.easy-button
+		width: 100%
+		padding: 10px 20px
+		font-size: 14px
+		border: none
+	.input-checkbox
+		font-size: 14px
+		margin-right: 5px
+	.label
+		line-height: 1.15em
+	.input-text
+		width: 100%
+		padding: 10px 10px
+		margin: 10px 0
+		border: rgba(0,0,0,0.1) 1px solid
+	.captcha
+		padding-left: 0
+
+
+	.g-recaptcha
+		transform: scale(0.57)
+		transform-origin: 0 0
+
+
+.features
+	background-color: $wgrey
+	background-size: auto auto
+	background-position: center 70%
+	background-repeat: no-repeat
+	text-align: center
+	&-img
+		width: 110px
+	&-text
+		line-height: 1.2em
+		font-size: 18px
+		text-transform: uppercase
+		span
+			color: #7cad47
+	.line
+		background: none
+		width: 1vh
+		height: 7vh
+		border: 4px dashed $blue
+		border-right: none
+		border-top: none
+		border-bottom: none
+		position: absolute
+		left: 50%
+	&-item
+		position: relative
+		margin-bottom: 7vh
+	&-hover
+		padding-top: 15px
+		padding-bottom: 1px
+		margin-bottom: 5px
+		+mt(.25s)
+		sup
+			visibility: hidden
+			padding: 5px
+		&:hover
+			background-color: rgba(#fff,0.6)
+			box-shadow: 0 0 20px rgba(#000,0.3)
+			sup
+				visibility: visible
+				color: $dblue
+	a
+		text-decoration: none
+	.f-item
+		&:nth-child(1)
+			.line
+				border: 4px dashed $blue
+				border-right: none
+				border-top: none
+				width: 6vw
+		&:nth-child(3)
+			.line
+				position: absolute
+				left: 22.5%
+				border: 4px dashed $blue
+				border-left: none
+				border-top: none
+				width: 6vw		
+	&-place
+		display: flex
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 200px
+		color: #fff
+		margin-top: 30px
+.h2
+	font-size: 1.8vw
+	line-height: 1.7em
+	font-family: $default-font
+	font-weight: 400
+	margin: 0
+	padding: 0
+	padding-bottom: 10px
+	span
+		text-transform: uppercase
+		font-size: 3.5vw
+		font-family: $bold-font
+.shutter
+	width: 100%
+	height: 150px
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+
+.company
+	background-size: cover
+	background-position: center
+	padding-bottom: 50px
+	font-size: 16px
+	.easy-button
+		padding: 16px	45px
+	p
+		line-height: 1.4em
+	ul
+		font-family: $default-font!important
+		font-weight: 100	
+		list-style-type: none
+		line-height: 1.4em
+		.li
+			margin-bottom: 30px
+			position: relative
+			padding-left: 14px
+			&::before
+				font-family: fontawesome-regular
+				content: '\f058'
+				font-size: 36px
+				position: absolute
+				left: -40px
+				top: 9px
+				padding-bottom: 20px
+				color: $blue
+
+	&-blue-text
+		color: $blue
+		font-family: $bold-font
+
+	.h2
+		text-align: center
+		color: #b0b0b0
+		font-size: 24px
+		margin-bottom: 30px
+		span
+			font-size: 47px
+			color: $blue
+
+.company-img
+	background-size: cover
+	background-position: center
+	width: 100%
+	height: 100%
+.company-img-wrap
+	background: $blue
+	padding: 30px
+	width: 100%
+	min-height: 300px
+	height: 30vh
+
+.completed
+	padding-top: 50px
+	text-align: center
+	background-color: $blue
+	background-size: cover
+	background-position: center
+	.img-responsive
+		margin: auto
+	.h2
+		color: #c0c0c0
+		font-size: 24px
+		font-family: $bold-font
+		span
+			color: #fff
+
+	&-carousel
+		width: 100%
+		.img-responsive
+			margin: 0
+			margin: auto
+			width: 100%
+			height: 100%
+		.owl-item
+			z-index: 1
+			&:hover
+				z-index: 99
+		&-item
+			margin-top: 40px
+			margin-bottom: 40px
+			position: relative
+			height: 280px
+			text-align: left
+			+mt(.25s)
+			&:hover
+				transform: scale(1.1)
+				box-shadow: 0 0 20px #000
+		&-label
+			position: absolute
+			left: 0
+			top: 110px
+			h3
+				background-color: rgba(#28324d,0.6)
+				font-size: 27px
+				text-align: left
+				color: #fff
+				padding: 15px
+				margin: 0
+				line-height: 1.2em
+			.easy-button
+				margin: 0
+				background-color: #28324d
+				border: none
+				font-size: 15px
+				padding: 5px 10px
+				margin: 0
+				&:hover
+					background-color: $green
+	.owl-dots
+		z-index: 1
+		color: #fff
+		font-size: 14px
+		position: relative
+		top: -49px
+		.owl-dot
+			display: inline-block
+			margin: 4px
+			outline: none
+			+mt(.25s)
+			&:before
+				content: '\f0c8'
+				font-family: fontawesome-regular
+			&.active
+				&:before
+					content: '\f0c8'
+					font-family: fontawesome
+	.owl-nav
+		z-index: 2
+		color: #fff
+		font-size: 30px
+		button
+			z-index: 2
+			outline: none
+			display: inline-block
+			position: relative
+			bottom: 6px
+			&:hover
+				color: $green
+		.owl-prev
+			left: -70px
+		.owl-next
+			left: 70px
+
+
+@import "media" // Always at the end
